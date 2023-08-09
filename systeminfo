@@ -1,7 +1,7 @@
-Running System Information on Wed Aug  9 12:36:51 AM EDT 2023
+Running System Information on Wed Aug  9 12:02:53 PM EDT 2023
 
 Hostname:
- shanelinux has the following uptime: 00:36:51 up 4:36, 2 users, load average: 0.47, 0.53, 0.54
+ shanelinux has the following uptime: 12:02:53 up 2:51, 1 user, load average: 2.46, 1.19, 1.18
 
 Kernel Information:
  Linux shanelinux 6.4.7-200.fc38.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Jul 27 20:01:18 UTC 2023 x86_64 GNU/Linux
@@ -11,7 +11,7 @@ Network Information:
     inet 127.0.0.1/8 scope host lo
 2: enp0s31f6: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
 3: wlp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
-    inet 192.168.1.141/24 brd 192.168.1.255 scope global dynamic noprefixroute wlp3s0
+    inet 172.16.2.206/24 brd 172.16.2.255 scope global dynamic noprefixroute wlp3s0
 
 Block Storage Devices:
 NAME      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
@@ -54,27 +54,26 @@ FedoraWorkstation (active)
   rich rules: 
 
 Top Processes Utilizing CPU & Memory Statistics:
-
-top - 00:36:52 up  4:36,  2 users,  load average: 0.47, 0.53, 0.54
-Tasks: 326 total,   1 running, 325 sleeping,   0 stopped,   0 zombie
-%Cpu(s):  0.7 us,  2.6 sy,  0.0 ni, 96.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
-MiB Mem :  15873.9 total,   9185.6 free,   3116.1 used,   3572.2 buff/cache
-MiB Swap:   8192.0 total,   8192.0 free,      0.0 used.  11816.6 avail Mem 
+top - 12:02:53 up  2:51,  1 user,  load average: 2.46, 1.19, 1.18
+Tasks: 409 total,   2 running, 407 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 10.0 us,  2.5 sy,  0.0 ni, 86.9 id,  0.0 wa,  0.6 hi,  0.0 si,  0.0 st
+MiB Mem :  15873.9 total,  10388.2 free,   2599.6 used,   2886.1 buff/cache
+MiB Swap:   8192.0 total,   8192.0 free,      0.0 used.  12857.1 avail Mem 
 
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
-  14668 root      20   0  225220   3712   2944 R  12.5   0.0   0:00.03 top
-   3606 shane     20   0 1122.0g  86424  65792 S   6.2   0.5   0:40.35 code
-   4990 shane     20   0 2669908 101020  75008 S   6.2   0.6   0:03.89 Isolated We+
-      1 root      20   0  229992  29648  10660 S   0.0   0.2   0:03.01 systemd
-      2 root      20   0       0      0      0 S   0.0   0.0   0:00.02 kthreadd
+   4015 shane     20   0 5506552 392316 158876 S  47.1   2.4  90:00.30 gnome-s+
+  31976 root      20   0  225364   3840   2944 R  17.6   0.0   0:00.04 top
+   3750 shane     20   0  330360 197004  91684 R   5.9   1.2  10:41.80 Xvnc
+   5690 shane     20   0 3453308 520880 159668 S   5.9   3.2  17:33.21 firefox
+      1 root      20   0  229944  30848  10872 S   0.0   0.2   0:08.78 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.05 kthreadd
       3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
-      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
-      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par+
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_fl+
       6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns
-      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0+
-     11 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
 
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       3.0Gi       9.0Gi       637Mi       3.5Gi        11Gi
+Mem:            15Gi       2.5Gi        10Gi       100Mi       2.8Gi        12Gi
 Swap:          8.0Gi          0B       8.0Gi
-Total:          23Gi       3.0Gi        16Gi
+Total:          23Gi       2.5Gi        18Gi
