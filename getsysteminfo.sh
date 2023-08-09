@@ -2,18 +2,8 @@
 
 getsysteminfo(){
     
-    # Script gathers information about the system, including networking, disk usage, and Kernel information
-    
-    # Take input from parameter
-    # Validate that command is being ran with sudo
-    # Gather system information
-    # Add error handling
-    # Create a file that formats and cleans up information
-    
-    # Run script with getsysteminfo.sh mypc - substitute mypc for your hostname
-    
-    
-    # Once complete and looking how you want it - remove all the redundant echo commands
+    # Script gathers information about the system, including networking, disk usage, and Kernel information, takes input from parameter
+    # Validates that script is being ran as Sudo
     
     if [ "$(id -u)" = "0" ]; then # If function is ran with sudo - execute script if UID = 0 (Root)
         
