@@ -1,0 +1,80 @@
+Running System Information on Wed Aug  9 12:36:51 AM EDT 2023
+
+Hostname:
+ shanelinux has the following uptime: 00:36:51 up 4:36, 2 users, load average: 0.47, 0.53, 0.54
+
+Kernel Information:
+ Linux shanelinux 6.4.7-200.fc38.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Jul 27 20:01:18 UTC 2023 x86_64 GNU/Linux
+
+Network Information:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+2: enp0s31f6: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+3: wlp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    inet 192.168.1.141/24 brd 192.168.1.255 scope global dynamic noprefixroute wlp3s0
+
+Block Storage Devices:
+NAME      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda         8:0    1     0B  0 disk 
+zram0     252:0    0     8G  0 disk [SWAP]
+nvme0n1   259:0    0 238.5G  0 disk 
+nvme0n1p1 259:1    0   600M  0 part /boot/efi
+nvme0n1p2 259:2    0     1G  0 part /boot
+nvme0n1p3 259:3    0 236.9G  0 part /home
+                                    /
+
+Disk Utilization:
+Filesystem     Type      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p3 btrfs     237G   28G  208G  12% /
+/dev/nvme0n1p3 btrfs     237G   28G  208G  12% /home
+/dev/nvme0n1p2 ext4      974M  241M  667M  27% /boot
+/dev/nvme0n1p1 vfat      599M   18M  582M   3% /boot/efi
+
+File System Mount Points:
+
+UUID=0a729514-6249-4eae-970d-a5751d7b61d2 /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=3443dc45-deca-478c-933c-9b65454732d1 /boot                   ext4    defaults        1 2
+UUID=F7B9-B3D4          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=0a729514-6249-4eae-970d-a5751d7b61d2 /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+Firewall Rules:
+FedoraWorkstation (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: wlp3s0
+  sources: 
+  services: dhcpv6-client mdns samba-client ssh
+  ports: 1025-65535/udp 1025-65535/tcp
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+
+Top Processes Utilizing CPU & Memory Statistics:
+
+top - 00:36:52 up  4:36,  2 users,  load average: 0.47, 0.53, 0.54
+Tasks: 326 total,   1 running, 325 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.7 us,  2.6 sy,  0.0 ni, 96.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  15873.9 total,   9185.6 free,   3116.1 used,   3572.2 buff/cache
+MiB Swap:   8192.0 total,   8192.0 free,      0.0 used.  11816.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  14668 root      20   0  225220   3712   2944 R  12.5   0.0   0:00.03 top
+   3606 shane     20   0 1122.0g  86424  65792 S   6.2   0.5   0:40.35 code
+   4990 shane     20   0 2669908 101020  75008 S   6.2   0.6   0:03.89 Isolated We+
+      1 root      20   0  229992  29648  10660 S   0.0   0.2   0:03.01 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.02 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0+
+     11 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq
+
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       3.0Gi       9.0Gi       637Mi       3.5Gi        11Gi
+Swap:          8.0Gi          0B       8.0Gi
+Total:          23Gi       3.0Gi        16Gi
